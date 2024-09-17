@@ -1,0 +1,347 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+body {
+    margin-bottom: 60px;
+    background-color: #0a192f;
+    color: #e6f1ff;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/*Typography*/
+body, h1, h2, h3, h4, h5, h6, p, span, a {
+    font-family: 'Arial', sans-serif; /* Change 'Arial' to your preferred font */
+}
+
+
+/*Global Styles*/
+.bg-dark {
+    background-color: #0a192f !important; /* Slightly darker than body background */
+    /*background-color: #1a1a1a !important;*/ /* Slightly lighter than body background */
+}
+
+.bg-secondary {
+    background-color: #333333 !important; /* Lighter than bg-dark */
+    /*background-color: #252525 !important;*/ /* Lighter than bg-dark */
+}
+
+.text-light {
+    color: #f0f0f0 !important;
+    /*color: #e0e0e0 !important;*/
+}
+
+/* General hover effects */
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+/*Navbar*/
+.navbar-dark {
+    /*background-color: #1a1a1a;*/
+    background-color: #252525;
+}
+
+.navbar-nav .nav-link {
+    color: #f0f0f0 !important;
+}
+
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff !important;
+    }
+
+
+/*Dropdown*/
+.dropdown-menu {
+    background-color: #172a45;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25);
+}
+
+
+.dropdown-item, .dropdown-header {
+    padding: 0.5rem 1rem;
+    color: #e6f1ff;
+}
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        background-color: #233554;
+        color: #ffffff;
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: #2c4a7c;
+        color: #ffffff;
+    }
+
+.dropdown-toggle-input {
+    display: none;
+}
+
+    .dropdown-toggle-input:checked ~ .dropdown-menu {
+        display: block;
+    }
+
+/* Dropdown styles (moved from _Layout.cshtml) */
+.navbar-nav .dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-nav .dropdown-toggle .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+
+/*Cards   Awards Page */
+.card {
+    background-color: #2a3647;
+    color: #e6f1ff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    }
+
+
+
+
+/*Buttons*/
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,123,255,0.5);
+}
+
+/* Section titles */
+.section-title:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Images */
+.rounded-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Progress bars */
+.progress {
+    background-color: #233554;
+}
+
+.progress-bar {
+    background-color: #64ffda;
+}
+
+    .progress-bar:hover {
+        background-color: #0056b3;
+    }
+
+
+/* Form inputs */
+.form-control {
+    background-color: #2a3647;
+    color: #f0f0f0;
+    border-color: #555555;
+}
+
+/*.form-control:hover, .form-control:focus {
+        border-color: #007bff;
+        background-color: #4a4a4a;*/
+/*}*/
+
+/*Experience date*/
+.experience-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    /*color: #ffffff;*/
+    color: #f0f0f0;
+    padding: 5px 10px;
+}
+
+
+
+
+/* Sidebar styles (moved from _Layout.cshtml) */
+#sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+    #sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #sidebar li {
+        margin-bottom: 15px;
+    }
+
+    #sidebar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 0.3s ease;
+        color: aliceblue;
+    }
+
+        #sidebar a:hover,
+        #sidebar a.active {
+            /*background-color: rgba(0,123,255,0.1);*/
+            background-color: rgba(0,123,255,0.2);
+            transform: scale(1.1);
+        }
+
+    #sidebar i {
+        font-size: 1.2rem;
+    }
+
+
+
+/*Styles for Awards and Coursework pages */
+.awards-container, .coursework-container {
+    padding-top: 2rem;
+    background-color: #0a192f;
+}
+
+.awards-container {
+    padding-bottom: 32rem;
+}
+
+.coursework-container {
+    padding-bottom: 11.5rem;
+}
+
+.awards-header, .coursework-header {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+}
+
+.award-row, .course-row {
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-color: #2c4a7c;
+}
+
+.award-content, .course-content {
+    padding: 15px;
+}
+
+.award-details, .course-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #0a192f;
+}
+
+.award-details-inner, .course-details-inner {
+    padding: 15px;
+}
+
+.chevron {
+    transition: transform 0.3s ease-in-out;
+}
+
+.expanded .chevron {
+    transform: rotate(180deg);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .awards-container, .coursework-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/*Project Images*/
+
+.project-image {
+    width: 80px; /* Adjust this value as needed */
+    height: 100px; /* Adjust this value as needed */
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*ReadMore Functionality*/
+.project-description {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    ;
+}
+
+    .project-description.expanded {
+        max-height: 1000px; /* Adjust this value based on your maximum description length */
+    }
+
+.read-more-btn {
+    transition: opacity 0.3s ease;
+}
+
+
+/*Project Links*/
+.project-link {
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:not(.expanded) .project-link {
+    display: none;
+}
+
+/*Photo for Title*/
+
+.navbar-brand img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}

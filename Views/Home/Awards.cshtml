@@ -1,0 +1,34 @@
+﻿@model Portfolio.Models.CourseWorkViewModel
+@{
+    ViewData["Title"] = "Course Work";
+}
+
+<div class="coursework-container">
+    <div class="container">
+        <div class="row coursework-header">
+            <div class="col-md-6">Course</div>
+            <div class="col-md-4">Period</div>
+            <div class="col-md-2">Grade</div>
+        </div>
+        @foreach (var course in Model.Courses)
+        {
+            <div class="course-row" onclick="toggleDetails(this)">
+                <div class="row course-content">
+                    <div class="col-md-6 text-light">@course.Name</div>
+                    <div class="col-md-4 text-light">@course.Period</div>
+                    <div class="col-md-2 text-light">
+                        @course.Grade
+                        <i class="fas fa-chevron-down float-right chevron"></i>
+                    </div>
+                </div>
+                <div class="course-details bg-dark text-light">
+                    <div class="course-details-inner">
+                        <p>@course.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
